@@ -4,45 +4,33 @@
 
 Space Walk is a 2D Platformer game made with the Unity Game Engine.
 
-!!!The images and animation assets that are used in it are not made by me and are from the Unity Asset Store. The assets's name in the store is Pixel Adventure 1, if you 
-want to you can go check it out and use it for your game!!!
+⚠️ The images and animation assets used in this game are not made by me. They are from the Unity Asset Store and their name is Pixel Adventure 1. If you are interested, you can check it out and use it for your game. ⚠️
 
 ---------------------------------------
 
 **ACKNOWLEDGEMENTS**
 
----**Graphic assets by: https://pixelfrog-assets.itch.io/**
-
+--- **Graphic assets by: https://pixelfrog-assets.itch.io/**
 
 ---------------------------------------
 
 **GAME INFO**
 
+--- Your goal in the game is to bypass all the traps and mobs while collecting all the kiwis on your way.
 
----Your goal in the game is to bypass all the traps and mobs while you collect all the kiwis on your way.
+--- The level creation and programming of the objects and traps were made by me using Visual Studio.
 
----The level creation ideas as the programming of the objects and the traps is made by me with Visual Studio.
-
----The game as of now consists of 4 levels, with different traps you should go by.
+--- The game currently has 4 levels, each with different traps that you need to avoid.
 
 --------------------------------------
 
 **FUTURE UPDATES**
 
-*more mobs(harder to bypass with more functions)
-
-*more levels
-
-*level locker system updates
-
-*player collider optimisations
-
-*settings menu creation
-
-*BOSS FIGHTS
-
-*inventory system
-
-*potion system
-
---------------------------------------
+- More challenging mobs with additional functions.
+- Additional levels.
+- Updates for the level locker system.
+- Optimization of player collider.
+- Creation of settings menu.
+- BOSS FIGHTS!
+- Inventory system.
+- Potion system.
