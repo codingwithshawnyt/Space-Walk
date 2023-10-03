@@ -13,11 +13,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
-    
+
     private float dirX = 0;
 
-    private enum MovementState {idle,running,jumping,falling}
-    
+    private enum MovementState { idle, running, jumping, falling }
+
 
     // Start is called before the first frame update
     private void Start()
@@ -36,9 +36,9 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
 
-        if (Input.GetKeyDown("space") && IsGrounded())
+        if (Input.GetKeyDown("space") | Input.GetKeyDown("up") && IsGrounded())
         {
-            rb.velocity = new Vector3(rb.velocity.x,jumpForce);
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce);
         }
         UpdateAnimationState();
     }
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.jumping;
         }
-        else if(rb.velocity.y < -.1f)
+        else if (rb.velocity.y < -.1f)
         {
             state = MovementState.falling;
         }
@@ -76,6 +76,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f,jumpableGround);
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 }
