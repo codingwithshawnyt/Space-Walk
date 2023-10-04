@@ -1,10 +1,8 @@
 # Space-Walk
 
-**IMPORTANT**
+**DETAILS**
 
 Space Walk is a 2D Platformer game made with the Unity Game Engine.
-
-⚠️ The images and animation assets used in this game are not made by me. They are from the Unity Asset Store and their name is Pixel Adventure 1. If you are interested, you can check it out and use it for your game. ⚠️
 
 ---------------------------------------
 
