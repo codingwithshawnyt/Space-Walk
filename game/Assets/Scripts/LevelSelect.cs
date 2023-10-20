@@ -149,5 +149,12 @@ public class LevelSelect : MonoBehaviour
     }
 }
 
-//This script is typically used in a game where you have multiple levels that can be selected from a menu. It creates a button for each level, and when a button is clicked, it loads that level. The Awake method is called when the script instance is being loaded, before any Start methods are called. It’s used here to call LevelButtons, which creates all of the level buttons. The LevelButtons method first checks if there’s a saved value for “level” in PlayerPrefs, which is used to store simple data between game sessions. If there isn’t, it sets “level” in PlayerPrefs to 1. Then it loops through all of the levels, creates a button for each one, and adds an onClick listener to each button that calls LevelSelected with the level number as an argument. The LevelSelected method saves the selected level in PlayerPrefs, logs it to the console, and starts a coroutine that loads the selected level after a delay. The LoadDelay coroutine waits for 2 seconds, then calls LoadLevels. The LoadLevels method loads the scene with the name "Level " + index. Note that this script assumes you have set up your scenes in Unity with names like “Level 1”, “Level 2”, etc., and that you have added those scenes to your build settings’ Scenes In Build list. If not, SceneManager.LoadScene("Level " + index); will not work.
+/* This script is used to manage the multiple levels that can be selected from a menu. It creates a button for each level, and when a button is clicked, it loads that level. 
+The Awake method is called when the script instance is being loaded, before any Start methods are called. It’s used here to call LevelButtons, which creates all of the level buttons. 
+The LevelButtons method first checks if there’s a saved value for “level” in PlayerPrefs, which is used to store simple data between game sessions. If there isn’t, it sets “level” in PlayerPrefs to 1. 
+Then it loops through all of the levels, creates a button for each one, and adds an onClick listener to each button that calls LevelSelected with the level number as an argument. 
+The LevelSelected method saves the selected level in PlayerPrefs, logs it to the console, and starts a coroutine that loads the selected level after a delay. 
+The LoadDelay coroutine waits for 2 seconds, then calls LoadLevels. The LoadLevels method loads the scene with the name "Level " + index. 
+Note that this script assumes you have set up your scenes in Unity with names like “Level 1”, “Level 2”, etc., and that you have added those scenes to your build settings’ Scenes In Build list. 
+If not, SceneManager.LoadScene("Level " + index); will not work. */
 
