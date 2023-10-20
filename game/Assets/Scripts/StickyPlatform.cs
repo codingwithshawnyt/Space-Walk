@@ -28,5 +28,5 @@ public class StickyPlatform : MonoBehaviour // This line is declaring a public c
     }
 }
 
-//This script appears to be for a platform in a game that can carry a player character along with it when they step onto it.
+//This script is for platforms that can carry a player character along with it when they step onto it.
 
