@@ -1,7 +1,7 @@
 // Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
 using System.Collections;
 
-// Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections, which allow users to create strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
+// Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
 using System.Collections.Generic;
 
 // Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
