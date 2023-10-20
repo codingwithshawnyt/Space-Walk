@@ -13,9 +13,12 @@ public class Gameplay : MonoBehaviour
     // The Start method is called before the first frame update. It's used for initialization.
     void Start()
     {
-        // This is where you would put any code that needs to run at the start of the game. Currently, it's empty.
+        // This is where we would put any code that needs to run at the start of the game. Currently, it's empty, be cause no such thing is needed.
     }
 }
 
-//This script is a basic template for a Unity script. It doesn’t do anything yet because the Start method is empty. You would add your own code inside Start to initialize any variables or set up any game objects when your game starts. The Gameplay class inherits from MonoBehaviour, which is the base class every script you create in Unity inherits from. It provides life-cycle functions such as Start(). This script should be attached to a game object in your Unity game that you want to control the gameplay with.
+/* This script is a basic template for a Unity script. It doesn’t do anything yet (besides start the game) because the Start method is empty. 
+You would add your own code inside Start to initialize any variables or set up any game objects when the game starts. 
+The Gameplay class inherits from MonoBehaviour, which is the base class every script you create in Unity inherits from. 
+It provides life-cycle functions such as Start(). */
 
