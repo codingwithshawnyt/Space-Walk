@@ -22,5 +22,7 @@ public class Rotate : MonoBehaviour
     }
 }
 
-//This script is typically used in a game where you want an object to rotate continuously. The Update method is called once per frame and rotates the object this script is attached to around the z-axis at a rate of 360 * speed degrees per second. Time.deltaTime is used to make the rotation smooth and frame rate independent. The speed variable can be set in the Unity editor thanks to the [SerializeField] attribute. If you attach this script to an object in your Unity game, that object will rotate around its z-axis continuously. user Comment each line of this: using System.Collections; using System.Collections.Generic; using UnityEngine;
-
+/* This script is used to make a certain object rotate continuously. 
+The Update method is called once per frame and rotates the object this script is attached to around the z-axis at a rate of 360 * speed degrees per second. 
+Time.deltaTime is used to make the rotation smooth and frame rate independent. The speed variable can be set in the Unity editor thanks to the [SerializeField] attribute. 
+If you attach this script to an object in Unity, that object will rotate around its z-axis continuously. */
