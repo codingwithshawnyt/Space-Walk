@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         // Setting rb's velocity to move the player horizontally at moveSpeed. Keeps current vertical velocity.
         rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
 
-        // Checking if the player has pressed space or up arrow and if they are grounded. If they have, make them jump.
+        // Checking if the player has pressed space or up arrow and if they are grounded (literally, on the ground). If they have, make them jump.
         if (Input.GetKeyDown("space") | Input.GetKeyDown("up") && IsGrounded())
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce);
@@ -107,5 +107,10 @@ public class PlayerMovement : MonoBehaviour
     }
 }
 
-//This script is typically used in a 2D platformer game where you want your player character to be able to move left and right, jump, and have different animations based on their movement state. The Start method gets the Rigidbody2D, BoxCollider2D, SpriteRenderer, and Animator components attached to this object (which should be your player character) and assigns them to rb, coll, sprite, and anim. It also freezes rotation on rb so it doesn’t rotate when colliding with other objects. The Update method gets input from the player for horizontal movement and sets rb.velocity to move the player horizontally at moveSpeed. It also checks if the player has pressed space or up arrow and if they are grounded, and if they have, it makes them jump. It then calls UpdateAnimationState to update the player’s animation based on their movement state. The UpdateAnimationState method checks the player’s horizontal and vertical movement and sets their movement state accordingly. It then sets “state” in anim to the current movement state, which controls which animation plays. The IsGrounded method checks if the player is grounded by casting a BoxCast downwards just below the player’s collider and checking if it hits anything on the jumpableGround layer.
+/* This script is used where you want your player character to be able to move left and right, jump, and have different animations based on their movement state. 
+The Start method gets the Rigidbody2D, BoxCollider2D, SpriteRenderer, and Animator components attached to this object (which should be your player character) and assigns them to rb, coll, sprite, and anim. 
+It also freezes rotation on rb so it doesn’t rotate when colliding with other objects. The Update method gets input from the player for horizontal movement and sets rb.velocity to move the player horizontally at moveSpeed. 
+It also checks if the player has pressed space or up arrow and if they are grounded, and if they have, it makes them jump. It then calls UpdateAnimationState to update the player’s animation based on their movement state. 
+The UpdateAnimationState method checks the player’s horizontal and vertical movement and sets their movement state accordingly. It then sets “state” in anim to the current movement state, which controls which animation plays. 
+The IsGrounded method checks if the player is grounded by casting a BoxCast downwards just below the player’s collider and checking if it hits anything on the jumpableGround layer. */
 
