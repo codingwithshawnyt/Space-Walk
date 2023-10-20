@@ -13,9 +13,10 @@ public class ExitGame : MonoBehaviour
     // Declaring a method named QuitGame. This method will be used to quit the application.
     void QuitGame()
     {
-        // Calling the Quit method on the Application class. This will quit the application when run in a standalone build. In the editor, it will stop playmode.
+        // Calling the Quit method on the Application class. This will quit the application when run in a standalone build. In the editor, it effectively does not do anything.
         Application.Quit();
     }
 }
-//This script is typically used to create an exit button in a Unity game. When the QuitGame method is called (usually through a button click event), it will cause the application to quit. Note that Application.Quit() does not work in the Unity editor or in web builds, it only works in standalone builds of your game. In the Unity editor, it will simply stop playmode. This script should be attached to the object in your Unity game that you want to use to trigger the quit action (like an exit button).
-
+/* This script is used to create an exit button. When the QuitGame method is called (usually through a button click event), it will cause the application to quit. 
+Note that Application.Quit() does not work in the Unity editor or in web builds, it only works in standalone builds of your game. In the Unity editor, it will simply stop playmode. 
+This script should be attached to the object in the Unity game that you want to use to trigger the quit action (in our case, an exit button). */
