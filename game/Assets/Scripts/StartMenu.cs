@@ -16,5 +16,5 @@ public class StartMenu : MonoBehaviour // This line is declaring a public class 
     }
 }
 
-//This script appears to be part of a start menu for a game. When the StartGame method is called, it advances the game to the next scene.
+//This script relates to the start menu. When the StartGame method is called, it advances the game to the next scene.
 
