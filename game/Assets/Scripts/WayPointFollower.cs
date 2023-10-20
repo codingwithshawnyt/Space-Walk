@@ -31,5 +31,5 @@ public class WayPointFollower : MonoBehaviour // This line is declaring a public
     }
 }
 
-//This script appears to be for an object in a game that moves along a set path defined by waypoints.
+//This script is for an object in Unity that moves along a set path defined by waypoints.
 
