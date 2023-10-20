@@ -25,5 +25,5 @@ public class respawn : MonoBehaviour // This line is declaring a public class na
     }
 }
 
-//This script appears to be for an object in a game that respawns (returns to its starting position) when it falls below a certain height (the ‘threshold’).
+//This script is used to respawn the player (returns to its starting position) when it falls below a certain height (the ‘threshold’).
 
