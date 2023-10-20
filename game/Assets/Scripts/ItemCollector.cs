@@ -28,7 +28,7 @@ public class ItemCollector : MonoBehaviour
         // Checking if the object that collided with the trigger has a tag of "kiwi".
         if (collision.gameObject.CompareTag("kiwi"))
         { 
-            // If it does, destroy the kiwi object.
+            // If it does, destroy the kiwi object, since it has been "collected".
             Destroy(collision.gameObject);
 
             // Increment the kiwis counter.
@@ -44,5 +44,12 @@ public class ItemCollector : MonoBehaviour
     }
 }
 
-//This script is typically used in a game where you want to collect items (in this case, “kiwis”). When an object tagged with “kiwi” enters this object’s trigger collider, it increments a counter, updates a UI text element to display the current count, and saves that count using PlayerPrefs so it persists between game sessions. The OnTriggerEnter2D method is called when another 2D collider enters this object’s trigger collider. The CompareTag method checks if the colliding object’s tag matches the specified string (“kiwi”). The Destroy method removes a game object, component or asset. The PlayerPrefs.SetInt method sets the value of the preference identified by key. This script should be attached to your player character in your Unity game. The “kiwi” objects should have 2D colliders on them set as triggers. When your player character enters a kiwi’s trigger collider, it will increment the counter, update the UI text, and save the count. Note that this script assumes you have set up a TextMeshProUGUI element in your scene for kiwisText. If not, kiwisText.text = "Kiwis: " +kiwis; will result in a NullReferenceException. Make sure you have set up a TextMeshProUGUI element in your scene and assigned it to kiwisText in this script’s inspector in Unity.
+/* This script is used to collect items (in this case, “kiwis”). 
+When an object tagged with “kiwi” enters this object’s trigger collider, it increments a counter, updates a UI text element to display the current count, and saves that count using PlayerPrefs so it persists between game sessions. 
+The OnTriggerEnter2D method is called when another 2D collider enters this object’s trigger collider. 
+The CompareTag method checks if the colliding object’s tag matches the specified string (“kiwi”). The Destroy method removes a game object, component or asset. 
+The PlayerPrefs.SetInt method sets the value of the preference identified by key. This script should be attached to your player character in your Unity game. 
+The “kiwi” objects should have 2D colliders on them set as triggers. When your player character enters a kiwi’s trigger collider, it will increment the counter, update the UI text, and save the count. 
+Note that this script assumes you have set up a TextMeshProUGUI element in your scene for kiwisText. If not, kiwisText.text = "Kiwis: " +kiwis; will result in a NullReferenceException. 
+Make sure you have set up a TextMeshProUGUI element in your scene and assigned it to kiwisText in this script’s inspector in Unity. */
 
