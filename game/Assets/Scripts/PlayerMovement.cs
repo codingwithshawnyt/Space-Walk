@@ -54,8 +54,10 @@ public class PlayerMovement : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
 
         // Setting rb's velocity to move the player horizontally at moveSpeed. Keeps current vertical velocity.
-        rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
-
+        if (rb.bodyType != RigidbodyType2D.Static) 
+        {
+            rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
+        }
         // Checking if the player has pressed space or up arrow and if they are grounded (literally, on the ground). If they have, make them jump.
         if (Input.GetKeyDown("space") | Input.GetKeyDown("up") && IsGrounded())
         {
