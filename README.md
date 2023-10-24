@@ -22,7 +22,7 @@ Space Walk is a 2D Platformer game being made with the Unity Game Engine.
 
 --------------------------------------
 
-**FUTURE UPDATES**
+**UPDATES BEING WORKED ON**
 
 - More challenging obstacles/traps/enemies with additional functions.
  
