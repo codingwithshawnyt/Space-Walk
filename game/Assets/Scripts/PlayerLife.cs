@@ -42,7 +42,7 @@ public class PlayerLife : MonoBehaviour
     // Method to handle what happens when the player dies.
     private void Death()
     {
-        // Setting the bodyType of rb to Static. This makes it unaffected by forces or collisions.
+        // Setting the bodyType of rb to Static. This makes it so that the player is no longer in a state of movement.
         rb.bodyType = RigidbodyType2D.Static;
 
         // Setting the "death" trigger on anim. This will play the "death" animation.
