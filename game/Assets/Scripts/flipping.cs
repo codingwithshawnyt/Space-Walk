@@ -38,6 +38,6 @@ public class flipping : MonoBehaviour // This line is declaring a public class n
     }
 }
 
-//This script flips its sprite on the X axis when it reaches a certain waypoint and destroys itself when it collides with an object named “Player”.
+//This script flips its sprite on the X axis when it reaches a certain waypoint and destroys itself when it collides with an object named “Player” (the user's character).
 //As of October 20, 2023, it has yet to be implemented into the game.
 
