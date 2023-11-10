@@ -47,6 +47,9 @@ public class PlayerLife : MonoBehaviour
 
         // Setting the "death" trigger on anim. This will play the "death" animation.
         anim.SetTrigger("death");
+
+        //Declaring death in debug log
+        Debug.Log("Player Died");
     }
 
     // Method to restart the current level.
