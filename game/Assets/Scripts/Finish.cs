@@ -27,6 +27,8 @@ public class Finish : MonoBehaviour
         if (collision.gameObject.name == "Player")
             // If it does, play the finish sound.
             finishSound.Play();
+            //And declare that in the log
+            Debug.Log("Level Completed");
     }
 }
 
