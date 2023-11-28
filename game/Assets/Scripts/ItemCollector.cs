@@ -35,7 +35,7 @@ public class ItemCollector : MonoBehaviour
             kiwis++;
 
             // Update the kiwisText to display the current number of kiwis collected.
-            kiwisText.text = "Kiwis: " +kiwis;
+            kiwisText.text = "Kiwis: " + kiwis;
 
             // Save the current number of kiwis collected using PlayerPrefs. This allows the data to persist between game sessions.
             PlayerPrefs.SetInt("Kiwis", kiwis);
