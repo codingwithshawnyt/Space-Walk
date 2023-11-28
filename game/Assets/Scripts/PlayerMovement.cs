@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.falling; // Set state to falling.
         }
 
-        anim.SetInteger("state", (int)state); // Setting "state" in anim to the current movement state. This will control which animation plays.
+        anim.SetInteger("state", (int) state); // Setting "state" in anim to the current movement state. This will control which animation plays.
 
     }
 
