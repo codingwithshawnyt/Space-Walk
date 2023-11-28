@@ -56,10 +56,10 @@ public class LevelSelect : MonoBehaviour
         }
 
         // Looping through all of the levels.
-        for (int i = 0; i < noOfLevels; i++)
+        for (int currLevel = 0; currLevel < noOfLevels; i++)
         {
             // Creating a new integer x and setting it equal to i + 1. This will be used as the level number for this button.
-            int x = new int();
+            int currLevel = new int();
             x = i + 1;
 
             // Instantiating a new level button and setting its parent to ParentPanel. Instantiate is used to create a new instance of a game object in your scene at runtime.
