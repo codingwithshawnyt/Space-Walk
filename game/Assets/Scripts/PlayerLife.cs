@@ -49,7 +49,7 @@ public class PlayerLife : MonoBehaviour
         anim.SetTrigger("death");
 
         //Declaring death in debug log
-        Debug.Log("Player Died");
+        Debug.Log("Player Died (Spike)");
     }
 
     // Method to restart the current level.
