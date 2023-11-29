@@ -1,19 +1,19 @@
-// Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
+//Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
 using System.Collections;
 
-// Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
+//Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
 using System.Collections.Generic;
 
-// Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
+//Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
 using UnityEngine;
 
-// Declaring a public class named ExitGame that inherits from MonoBehaviour. MonoBehaviour is the base class from which every Unity script derives.
+//Declaring a public class named ExitGame that inherits from MonoBehaviour. MonoBehaviour is the base class from which every Unity script derives.
 public class ExitGame : MonoBehaviour
 {
-    // Declaring a method named QuitGame. This method will be used to quit the application.
+    //Declaring a method named QuitGame. This method will be used to quit the application.
     void QuitGame()
     {
-        // Calling the Quit method on the Application class. This will quit the application when run in a standalone build. In the editor, it effectively does not do anything.
+        //Calling the Quit method on the Application class. This will quit the application when run in a standalone build. In the editor, it effectively does not do anything.
         Application.Quit();
     }
 }
