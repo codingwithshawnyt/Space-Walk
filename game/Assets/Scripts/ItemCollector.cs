@@ -28,6 +28,8 @@ public class ItemCollector : MonoBehaviour
         // Checking if the object that collided with the trigger has a tag of "kiwi".
         if (collision.gameObject.CompareTag("kiwi"))
         { 
+            // Note: If debugger is to be added, logging code needs to be here
+            
             // If it does, destroy the kiwi object, since it has been "collected".
             Destroy(collision.gameObject);
 
