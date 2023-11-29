@@ -1,31 +1,31 @@
-// Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
+//Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
 using System.Collections;
 
-// Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
+//Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
 using System.Collections.Generic;
 
-// Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
+//Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
 using UnityEngine;
 
-// Declaring a public class named Finish that inherits from MonoBehaviour. MonoBehaviour is the base class from which every Unity script derives.
+//Declaring a public class named Finish that inherits from MonoBehaviour. MonoBehaviour is the base class from which every Unity script derives.
 public class Finish : MonoBehaviour
 {
-    // Declaring a private AudioSource variable named finishSound. This will be used to play a sound when the player finishes.
+    //Declaring a private AudioSource variable named finishSound. This will be used to play a sound when the player finishes.
     private AudioSource finishSound;
 
-    // The Start method is called before the first frame update. It's used for initialization.
+    //The Start method is called before the first frame update. It's used for initialization.
     void Start()
     {
-        // Getting the AudioSource component attached to this object and assigning it to the finishSound variable (this will come in handy later).
+        //Getting the AudioSource component attached to this object and assigning it to the finishSound variable (this will come in handy later).
         finishSound = GetComponent<AudioSource>();
     }
 
-    // OnTriggerEnter2D is called when another object enters a trigger collider attached to this object (2D physics only).
+    //OnTriggerEnter2D is called when another object enters a trigger collider attached to this object (2D physics only).
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Checking if the object that collided with the trigger has a name of "Player" (because if it's not the player, then the user hasn't finished).
+        //Checking if the object that collided with the trigger has a name of "Player" (because if it's not the player, then the user hasn't finished).
         if (collision.gameObject.name == "Player")
-            // If it does, play the finish sound.
+            //If it does, play the finish sound.
             finishSound.Play();
             //And declare that in the log
             Debug.Log("Level Completed");
