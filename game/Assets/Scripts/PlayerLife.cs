@@ -1,61 +1,61 @@
-// Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
+//Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
 using System.Collections;
 
-// Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
+//Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
 using System.Collections.Generic;
 
-// Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
+//Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
 using UnityEngine;
 
-// Importing the UnityEngine.SceneManagement namespace which allows you to manage your game's scenes, load and unload scenes, and travel between scenes in your game.
+//Importing the UnityEngine.SceneManagement namespace which allows you to manage your game's scenes, load and unload scenes, and travel between scenes in your game.
 using UnityEngine.SceneManagement;
 
-// Declaring a public class named PlayerLife that inherits from MonoBehaviour. MonoBehaviour is the base class from which every Unity script derives.
+//Declaring a public class named PlayerLife that inherits from MonoBehaviour. MonoBehaviour is the base class from which every Unity script derives.
 public class PlayerLife : MonoBehaviour
 {
-    // Declaring private variables for the Animator and Rigidbody2D components.
+    //Declaring private variables for the Animator and Rigidbody2D components.
     private Animator anim;
     private Rigidbody2D rb;
 
-    // The Start method is called before the first frame update. It's used for initialization.
+    //The Start method is called before the first frame update. It's used for initialization.
     void Start()
     {
-        // Getting the Rigidbody2D component attached to this object and assigning it to rb.
+        //Getting the Rigidbody2D component attached to this object and assigning it to rb.
         rb = GetComponent<Rigidbody2D>();
 
-        // Getting the Animator component attached to this object and assigning it to anim.
+        //Getting the Animator component attached to this object and assigning it to anim.
         anim = GetComponent<Animator>(); 
     }
 
-    // OnCollisionEnter2D is called when this collider/rigidbody has begun touching another rigidbody/collider (2D physics only).
+    //OnCollisionEnter2D is called when this collider/rigidbody has begun touching another rigidbody/collider (2D physics only).
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Checking if the object that collided with this one has a tag of "trap".
+        //Checking if the object that collided with this one has a tag of "trap".
         if (collision.gameObject.CompareTag("trap"))
         { 
-            // If it does, call the Death method (below).
+            //If it does, call the Death method (below).
             Death();
         }
        
     }
 
-    // Method to handle what happens when the player dies.
+    //Method to handle what happens when the player dies.
     private void Death()
     {
-        // Setting the bodyType of rb to Static. This makes it so that the player is no longer in a state of movement.
+        //Setting the bodyType of rb to Static. This makes it so that the player is no longer in a state of movement.
         rb.bodyType = RigidbodyType2D.Static;
 
-        // Setting the "death" trigger on anim. This will play the "death" animation.
+        //Setting the "death" trigger on anim. This will play the "death" animation.
         anim.SetTrigger("death");
 
         //Declaring death in debug log
         Debug.Log("Player Died (Spike)");
     }
 
-    // Method to restart the current level.
+    //Method to restart the current level.
     public void RestartLevel()
     {
-        // Loading the scene with the same name as the currently active scene. This effectively restarts the level.
+        //Loading the scene with the same name as the currently active scene. This effectively restarts the level.
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
