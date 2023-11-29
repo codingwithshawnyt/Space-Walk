@@ -1,45 +1,45 @@
-// Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
+//Importing the System.Collections namespace which provides interfaces and classes that define various collections of objects, such as lists, queues, bit arrays, hash tables and dictionaries.
 using System.Collections;
 
-// Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
+//Importing the System.Collections.Generic namespace which contains interfaces and classes that define generic collections which allow for strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
 using System.Collections.Generic;
 
-// Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
+//Importing the UnityEngine namespace which contains all of the classes, structures and enumerations that Unity uses.
 using UnityEngine;
 
-// Importing the UnityEngine.UI namespace which contains all of the classes used for UI elements in Unity.
+//Importing the UnityEngine.UI namespace which contains all of the classes used for UI elements in Unity.
 using UnityEngine.UI;
 
-// Importing the TMPro (TextMeshPro) namespace which is a replacement for Unity's existing text components like Text Mesh and UI Text. TextMeshPro uses Signed Distance Field (SDF) as its primary text rendering pipeline making it possible to render text cleanly at any point size and resolution.
+//Importing the TMPro (TextMeshPro) namespace which is a replacement for Unity's existing text components like Text Mesh and UI Text. TextMeshPro uses Signed Distance Field (SDF) as its primary text rendering pipeline making it possible to render text cleanly at any point size and resolution.
 using TMPro;
 
-// Declaring a public class named ItemCollector that inherits from MonoBehaviour. MonoBehaviour is the base class from which every Unity script derives.
+//Declaring a public class named ItemCollector that inherits from MonoBehaviour. MonoBehaviour is the base class from which every Unity script derives.
 public class ItemCollector : MonoBehaviour
 {
-    // Declaring a private integer variable named kiwis. This will be used to keep track of the number of kiwis collected.
+    //Declaring a private integer variable named kiwis. This will be used to keep track of the number of kiwis collected.
     private int kiwis = 0;
 
-    // Declaring a private TextMeshProUGUI variable named kiwisText. The [SerializeField] attribute allows private fields to be visible in the Unity editor.
+    //Declaring a private TextMeshProUGUI variable named kiwisText. The [SerializeField] attribute allows private fields to be visible in the Unity editor.
     [SerializeField] private TextMeshProUGUI kiwisText;
 
-    // OnTriggerEnter2D is called when another object enters a trigger collider attached to this object (2D physics only).
+    //OnTriggerEnter2D is called when another object enters a trigger collider attached to this object (2D physics only).
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Checking if the object that collided with the trigger has a tag of "kiwi".
+        //Checking if the object that collided with the trigger has a tag of "kiwi".
         if (collision.gameObject.CompareTag("kiwi"))
         { 
-            // Note: If debugger is to be added, logging code needs to be here
-            
-            // If it does, destroy the kiwi object, since it has been "collected".
+            //Note: If debugger is to be added, logging code needs to be here
+
+            //If it does, destroy the kiwi object, since it has been "collected".
             Destroy(collision.gameObject);
 
-            // Increment the kiwis counter.
+            //Increment the kiwis counter.
             kiwis++;
 
-            // Update the kiwisText to display the current number of kiwis collected.
+            //Update the kiwisText to display the current number of kiwis collected.
             kiwisText.text = "Kiwis: " + kiwis;
 
-            // Save the current number of kiwis collected using PlayerPrefs. This allows the data to persist between game sessions.
+            //Save the current number of kiwis collected using PlayerPrefs. This allows the data to persist between game sessions.
             PlayerPrefs.SetInt("Kiwis", kiwis);
         }
     
