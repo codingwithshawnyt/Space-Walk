@@ -16,7 +16,7 @@ Space Walk is a 2D Platformer game being made with the Unity Game Engine.
 
 - Your goal in the game is to bypass all the traps, obstacles, and enemies while avoiding all the kiwis on your way.
  
-- The level creation and programming of the objects and traps were made by me using Visual Studio.
+- The level creation and programming of the objects and traps were made by me using Visual Studio Code.
  
 - The game currently has 4 levels, each with different traps that you need to avoid.
 
