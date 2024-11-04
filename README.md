@@ -1,8 +1,8 @@
-# Space-Walk
+# Leap of Legends
 
 **DETAILS**
 
-Space Walk is a 2D Platformer game being made with the Unity Game Engine.
+Leap of Legends is a 2D Platformer game being made with the Unity Game Engine.
 
 ---------------------------------------
 
